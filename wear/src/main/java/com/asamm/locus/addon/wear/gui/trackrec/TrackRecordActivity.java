@@ -8,13 +8,14 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.wear.widget.CircularProgressLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+
+import androidx.wear.widget.CircularProgressLayout;
 
 import com.asamm.locus.addon.wear.MainApplication;
 import com.asamm.locus.addon.wear.R;
@@ -56,6 +57,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Objects;
 
 import locus.api.utils.Logger;
 
@@ -303,7 +305,7 @@ public class TrackRecordActivity extends LocusWearActivity implements CircularPr
             DataPayload p = getInitialCommandType();
             getMainApplication().sendDataWithWatchDogConditionable(getInitialCommandType(),
                     getInitialCommandResponseType(),
-                    WATCHDOG_TIMEOUT, (d) -> d != null);
+                    WATCHDOG_TIMEOUT, Objects::nonNull);
             return;
         }
         runOnUiThread(() -> {

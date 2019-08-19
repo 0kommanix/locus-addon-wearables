@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
-import android.support.v4.view.GestureDetectorCompat;
 import android.util.AttributeSet;
 import android.view.Display;
 import android.view.GestureDetector;
@@ -14,6 +13,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+
+import androidx.core.view.GestureDetectorCompat;
 
 import com.asamm.locus.addon.wear.common.communication.containers.trackrecording.TrackRecordingValue;
 import com.asamm.locus.addon.wear.gui.trackrec.TrackRecActivityState;

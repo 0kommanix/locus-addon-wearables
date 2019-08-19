@@ -3,14 +3,15 @@ package com.asamm.locus.addon.wear.gui.trackrec.profiles;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.wear.widget.WearableLinearLayoutManager;
-import android.support.wear.widget.WearableRecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.wear.widget.WearableLinearLayoutManager;
+import androidx.wear.widget.WearableRecyclerView;
 
 import com.asamm.locus.addon.wear.AppStorageManager;
 import com.asamm.locus.addon.wear.R;
@@ -223,10 +224,10 @@ public class ProfileListActivity extends LocusWearActivity {
 		 */
 		class ViewHolder extends RecyclerView.ViewHolder {
 			// each data item is just a string in this case
-			public final TextView mTextViewName;
-			public final ImageView mIcon;
+			final TextView mTextViewName;
+			final ImageView mIcon;
 
-			public ViewHolder(View root) {
+			ViewHolder(View root) {
 				super(root);
 				mTextViewName = root.findViewById(R.id.profile_list_item_name);
 				mIcon = root.findViewById(R.id.profile_list_item_image);

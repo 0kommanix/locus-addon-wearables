@@ -2,8 +2,9 @@ package com.asamm.locus.addon.wear.common.communication;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.asamm.locus.addon.wear.common.communication.containers.TimeStampStorable;
 import com.asamm.locus.addon.wear.common.communication.containers.commands.EmptyCommand;
@@ -39,7 +40,7 @@ public class LocusWearCommService implements
 
 	private static final String TAG = "LocusWearCommService";
 
-	protected final int MAX_DATA_ITEM_SIZE_B = 99 * 1024;
+	private final int MAX_DATA_ITEM_SIZE_B = 99 * 1024;
 
 	protected Context context;
 
@@ -95,7 +96,7 @@ public class LocusWearCommService implements
 	}
 
 	/**
-	 * Sends {@link EmptyCommand} to given {@path}
+	 * Sends {@link EmptyCommand} to given {@param path}
 	 *
 	 * @param path
 	 */
@@ -104,7 +105,7 @@ public class LocusWearCommService implements
 	}
 
 	/**
-	 * Sends given {@data} to given {@path}
+	 * Sends given {@param data} to given {@param path}
 	 *
 	 * @param path
 	 * @param data

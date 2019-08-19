@@ -5,8 +5,6 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.GestureDetector;
@@ -16,6 +14,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.asamm.locus.addon.wear.ApplicationMemoryCache;
 import com.asamm.locus.addon.wear.MainApplication;
@@ -36,6 +36,7 @@ import com.asamm.locus.addon.wear.gui.custom.hwcontrols.HwButtonAction;
 import com.asamm.locus.addon.wear.gui.custom.hwcontrols.HwButtonActionDescEnum;
 import com.asamm.locus.addon.wear.gui.custom.hwcontrols.HwButtonAutoDetectActionEnum;
 import com.asamm.locus.addon.wear.gui.trackrec.TrackRecordActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import locus.api.android.features.periodicUpdates.UpdateContainer;
 import locus.api.android.utils.UtilsFormat;
@@ -664,18 +665,18 @@ public class MapActivity extends LocusWearActivity {
 			mMapOffsetY = newOffsetY;
 		}
 		private void addOffset(int x, int y) {
-			mMapOffsetX += x;
-			mMapOffsetY += y;
+			mMapOffsetX = mMapOffsetX + x;
+			mMapOffsetY = mMapOffsetY + y;
 		}
 
 		private void multiplyOffset(int multiplier) {
-			mMapOffsetX *= multiplier;
-			mMapOffsetY *= multiplier;
+			mMapOffsetX = mMapOffsetX * multiplier;
+			mMapOffsetY = mMapOffsetY * multiplier;
 		}
 
 		private void divideOffset(int divisor) {
-			mMapOffsetX /= divisor;
-			mMapOffsetY /= divisor;
+			mMapOffsetX = mMapOffsetX / divisor;
+			mMapOffsetY = mMapOffsetY / divisor;
 		}
 	}
 }

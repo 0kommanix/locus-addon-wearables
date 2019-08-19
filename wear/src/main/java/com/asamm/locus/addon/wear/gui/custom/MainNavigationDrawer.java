@@ -2,9 +2,10 @@ package com.asamm.locus.addon.wear.gui.custom;
 
 import android.content.Context;
 import android.os.Handler;
-import android.support.v4.widget.DrawerLayout;
-import android.support.wear.widget.drawer.WearableDrawerView;
 import android.util.AttributeSet;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.wear.widget.drawer.WearableDrawerView;
 
 /**
  * Created by Milan Cejnar on 14.11.2017.
@@ -18,7 +19,7 @@ public class MainNavigationDrawer extends WearableDrawerView {
 	private static final int DEFAULT_PEEK_DELAY = 1500;
 
 	public MainNavigationDrawer(Context context) {
-		this(context, (AttributeSet) null);
+		this(context, null);
 	}
 
 	public MainNavigationDrawer(Context context, AttributeSet attrs) {

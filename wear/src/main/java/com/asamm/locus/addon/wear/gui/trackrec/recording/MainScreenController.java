@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.support.wear.widget.CircularProgressLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.wear.widget.CircularProgressLayout;
 
 import com.asamm.locus.addon.wear.R;
 import com.asamm.locus.addon.wear.common.communication.containers.trackrecording.TrackRecordingValue;
@@ -134,7 +135,7 @@ public class MainScreenController implements TrackRecordingControllerUpdatable {
     }
 
     public void setProgressionVisible(boolean enableProgression) {
-        mImgStopRecording.setTag(Boolean.valueOf(enableProgression));
+        mImgStopRecording.setTag(enableProgression);
         mImgStopRecording.setImageDrawable(enableProgression ?
                 getControllersView().getContext().getDrawable(R.drawable.ic_track_record_cancel)
                 : mStopDrawable);

@@ -1,8 +1,9 @@
 package com.asamm.locus.addon.wear.communication;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.asamm.locus.addon.wear.MainApplication;
 import com.asamm.locus.addon.wear.WatchDog;

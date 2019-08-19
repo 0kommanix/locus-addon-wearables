@@ -1,6 +1,6 @@
-/**
- * Created by Milan Cejnar on 01.12.2017.
- * Asamm Software, s.r.o.
+/*
+  Created by Milan Cejnar on 01.12.2017.
+  Asamm Software, s.r.o.
  */
 package com.asamm.locus.addon.wear.gui.trackrec.stats.view;
 
@@ -11,9 +11,6 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.content.ContextCompat;
 import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -24,6 +21,10 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 import com.asamm.locus.addon.wear.R;
 import com.asamm.locus.addon.wear.common.communication.containers.trackrecording.TrackRecordingValue;
@@ -178,7 +179,7 @@ public class TrackStatLayout extends ConstraintLayout {
         mTextViewDescription.setTextColor(enabled ? getContext().getColor(R.color.base_light_primary) : getContext().getColor(R.color.base_dark_primary));
         mTextViewValue.setTextColor(enabled ? getContext().getColor(R.color.base_light_primary) : getContext().getColor(R.color.base_dark_primary));
         if (enabled) {
-            mImageViewIcon.setColorFilter(getResources().getColor(R.color.base_light_primary));
+            mImageViewIcon.setColorFilter(ContextCompat.getColor(getContext(), R.color.base_light_primary));
         } else {
             mImageViewIcon.clearColorFilter();
         }
